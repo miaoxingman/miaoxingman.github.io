@@ -66,6 +66,25 @@
 		* 无参数调用off()一次性移除已绑定的所有类型的事件处理函数。
 	* 一个需要注意的问题是，事件的触发总是由用户操作引发的,当用户在文本框中输入时，就会触发change事件。但是，如果用JavaScript代码去改动文本框的值，将不会触发change事件.有些时候，我们希望用代码触发change事件，可以直接调用无参数的change()方法来触发该事件.
 
+13. 用JavaScript实现动画，原理非常简单：我们只需要以固定的时间间隔（例如，0.1秒），每次把DOM元素的CSS样式修改一点（例如，高宽各增加10%），看起来就像动画了。
+
+14. 用Javascript写AJAX要考虑各个浏览器的兼容性，而用jQuery则不需要。jQuery在全局对象jQuery（也就是$）绑定了ajax()函数，可以处理AJAX请求。ajax(url, settings)函数需要接收一个URL和一个可选的settings对象，常用的选项如下：
+	* async 是否异步执行AJAX请求，默认为true，千万不要指定为false；
+	* method 发送的Method，缺省为'GET'，可指定为'POST'、'PUT'等；
+	* contentType 发送POST请求的格式，默认值为'application/x-www-form-urlencoded; charset=UTF-8'，也可以指定为text/plain、application/json；
+	* data 发送的数据，可以是字符串、数组或object。如果是GET请求，data将被转换成query附加到URL上，如果是POST请求，根据contentType把data序列化成合适的格式
+	* headers 发送的额外的HTTP头，必须是一个object；
+	* dataType 接收的数据格式，可以指定为'html'、'xml'、'json'、'text'等，缺省情况下根据响应的Content-Type猜测。
+
+15. 可以利用Promise跟$.ajax()结合从而优雅的处理成功和失败的各种情况.
+16. 对常用的AJAX操作，jQuery提供了一些辅助方法。
+	* get
+	* post
+	* getJSON
+17. 扩展jQuery或者编写jQuery插件的方法是给jQuery绑定一个新的方法.
+	* $.fn.highlight1 = function {return this;};
+	* return this 的原因是为了支持链式操作.
+
 
 
 

@@ -21,11 +21,11 @@
 
 6. Javascript的对象是由一组key-value组成的无序集合.
 
-7. javascript ES6新增了一种模板字符串，可以在string中使用${}直接替换变量.
+7. javascript ES6新增了一种模板字符串，可以在string中使用${}直接替换变量. 使用模板字符串的时候需要使用反撇号代替单引号和双引号。
  
  	```
       name = "world";
-      alert("hello ${name}");
+      alert(`hello ${name}`);
  	```
 
 8. 与java和python一样，JavaScript中的字符串也是不可变的。
